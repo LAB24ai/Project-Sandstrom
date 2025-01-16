@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  jupyter:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.jupyter
+    volumes:
+      - ..:/workspace
+      - elastin-data:/data
+    ports:
+      - "8888:8888"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - ELASTIN_DATA_DIR=/data
+    depends_on:
+      - gpu
+
+  gpu:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.gpu
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    volumes:
+      - elastin-data:/data
+
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9091:9090"
+    volumes:
+      - ../monitoring/prometheus:/etc/prometheus
+      - prometheus-data:/prometheus
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3002:3000"
+    volumes:
+      - ../monitoring/grafana:/etc/grafana
+      - grafana-data:/var/lib/grafana
+    depends_on:
+      - prometheus
+
+volumes:
+  elastin-data:
+  prometheus-data:
+  grafana-data:
+
+networks:
+  default:
+    name: elastin-network 

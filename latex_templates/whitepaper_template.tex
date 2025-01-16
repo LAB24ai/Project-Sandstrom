@@ -1,0 +1,62 @@
+\documentclass[11pt,a4paper]{article}
+
+% Essential packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+% Page geometry
+\geometry{margin=2.5cm}
+
+% Colors
+\definecolor{primary}{RGB}{0, 82, 155}
+\definecolor{secondary}{RGB}{100, 100, 100}
+
+% Title formatting
+\titleformat{\section}
+    {\Large\bfseries\color{primary}}
+    {\thesection}{1em}{}
+\titleformat{\subsection}
+    {\large\bfseries\color{secondary}}
+    {\thesubsection}{1em}{}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{secondary}{Project Sandstrom}}
+\fancyhead[R]{\textcolor{secondary}{\thepage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\title{
+    {\Huge\textbf{Project Sandstrom:}}\\[0.5em]
+    {\Huge\textbf{Elastin Research Findings}}\\[1em]
+    {\Large LAB24 AI Research Team}
+}
+\author{LAB24 AI}
+\date{\today}
+
+\begin{document}
+
+$if(title)$
+\maketitle
+$endif$
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+
+$if(toc)$
+\newpage
+\tableofcontents
+\newpage
+$endif$
+
+$body$
+
+\end{document} 

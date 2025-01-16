@@ -1,0 +1,111 @@
+% Dark theme configuration for PDF output
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage{emoji}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+
+% Define dark theme colors
+\definecolor{background}{RGB}{40, 42, 54}
+\definecolor{foreground}{RGB}{248, 248, 242}
+\definecolor{comment}{RGB}{98, 114, 164}
+\definecolor{purple}{RGB}{189, 147, 249}
+\definecolor{green}{RGB}{80, 250, 123}
+\definecolor{orange}{RGB}{255, 184, 108}
+\definecolor{lightgray}{RGB}{180, 180, 180}
+\definecolor{darkgray}{RGB}{60, 60, 60}
+
+% Set page color and text color
+\pagecolor{background}
+\color{foreground}
+
+% Configure fonts
+\setmainfont{Roboto}[
+    Path = /Library/Fonts/,
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic
+]
+\setmonofont{FiraCode}[
+    Path = /Library/Fonts/,
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold
+]
+
+% Configure hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=purple,
+    urlcolor=green,
+    citecolor=orange,
+    filecolor=orange,
+    menucolor=foreground
+}
+
+% Configure code highlighting
+\usemintedstyle{monokai}
+\setminted{
+    bgcolor=darkgray,
+    fontsize=\small,
+    frame=single,
+    framesep=2mm,
+    baselinestretch=1.2,
+    linenos=true,
+    breaklines=true,
+    fontfamily=ttfamily
+}
+
+% Configure text boxes
+\tcbset{
+    enhanced,
+    colback=darkgray,
+    colframe=purple,
+    arc=0mm,
+    boxrule=0.5pt,
+    left=2mm,
+    right=2mm,
+    top=1mm,
+    bottom=1mm
+}
+
+% Custom commands for highlighting
+\newcommand{\highlight}[1]{\sethlcolor{purple}\hl{#1}}
+\newcommand{\code}[1]{\mintinline[bgcolor=darkgray,fontsize=\small]{text}{#1}}
+\newcommand{\note}[1]{\begin{tcolorbox}[title=Note]\color{foreground}#1\end{tcolorbox}}
+\newcommand{\warning}[1]{\begin{tcolorbox}[colframe=orange,title=Warning]\color{foreground}#1\end{tcolorbox}}
+
+% Configure headers and footers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{lightgray}\leftmark}
+\fancyhead[R]{\color{lightgray}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{lightgray}\leaders\hrule height \headrulewidth\hfill}}
+
+% Document settings
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+% Fix for listings package
+\lstset{
+    backgroundcolor=\color{darkgray},
+    basicstyle=\color{foreground}\ttfamily\small,
+    keywordstyle=\color{purple},
+    commentstyle=\color{comment},
+    stringstyle=\color{green},
+    numbers=left,
+    numberstyle=\tiny\color{lightgray},
+    breaklines=true,
+    breakatwhitespace=true,
+    frame=single,
+    rulecolor=\color{purple},
+    framesep=3pt,
+    numbersep=5pt
+} 

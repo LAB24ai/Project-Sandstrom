@@ -1,0 +1,162 @@
+# Python Dependencies
+numpy>=1.21.0
+pandas>=1.3.0
+matplotlib>=3.4.0
+scikit-learn>=0.24.0
+torch>=1.9.0
+transformers>=4.10.0
+torchvision>=0.10.0
+opencv-python>=4.5.0
+pillow>=8.3.0
+biopython>=1.79
+gromacs>=2021.0
+pymol>=2.5.0
+scipy>=1.7.0
+statsmodels>=0.13.0
+h5py>=3.4.0
+networkx>=2.6.0
+prometheus-client>=0.11.0
+grafana-client>=2.0.0
+plotly>=5.3.0
+seaborn>=0.11.0
+jupyter>=1.0.0
+jupyterlab>=3.1.0
+pytest>=6.2.0
+black>=21.7b0
+mypy>=0.910
+flake8>=3.9.0
+asyncio>=3.4.3
+aiohttp>=3.8.0
+
+# LlamaIndex and Related Dependencies
+llama-index>=0.8.0
+chromadb>=0.4.3
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.4  # Use faiss-gpu for GPU support
+langchain>=0.0.300
+pydantic>=2.0.0
+fastapi>=0.100.0
+uvicorn>=0.23.0
+redis>=5.0.0
+psycopg2-binary>=2.9.9
+elasticsearch>=8.10.0
+tiktoken>=0.5.0
+openai>=1.0.0
+tenacity>=8.2.0
+backoff>=2.2.0
+python-dotenv>=1.0.0
+
+# Monitoring and Observability
+jaeger-client>=4.8.0
+opentelemetry-api>=1.20.0
+opentelemetry-sdk>=1.20.0
+opentelemetry-instrumentation>=0.41b0
+prometheus-fastapi-instrumentator>=6.1.0
+python-json-logger>=2.0.0
+
+# PDF Generation Tools
+pandoc>=3.6.1
+pygments>=2.10.0
+weasyprint>=54.0
+
+# LaTeX Components
+## Base Components
+texlive-base
+texlive-latex-recommended
+texlive-fonts-recommended
+texlive-latex-extra
+texlive-xetex
+
+## Additional LaTeX Packages
+texlive-latex-xcolor
+texlive-latex-minted
+texlive-latex-soul
+texlive-fonts-extra
+texlive-lang-english
+texlive-latex-graphics
+texlive-pictures
+texlive-science
+texlive-bibtex-extra
+texlive-latex-fancy
+texlive-latex-tcolorbox
+texlive-latex-listings
+texlive-latex-fontspec
+texlive-latex-emoji
+texlive-latex-geometry
+texlive-latex-hyperref
+texlive-latex-titlesec
+texlive-latex-fancyhdr
+texlive-latex-enumitem
+texlive-latex-booktabs
+texlive-latex-microtype
+texlive-latex-inputenc
+texlive-latex-fontenc
+texlive-latex-graphicx
+texlive-latex-float
+texlive-latex-caption
+texlive-latex-framed
+texlive-latex-parskip
+texlive-latex-setspace
+texlive-latex-subfig
+texlive-latex-multirow
+texlive-latex-wrapfig
+texlive-latex-lastpage
+texlive-latex-abstract
+texlive-latex-appendix
+texlive-latex-amsmath
+texlive-latex-amssymb
+texlive-latex-array
+texlive-latex-colortbl
+texlive-latex-tikz
+texlive-latex-pgf
+texlive-latex-pstricks
+texlive-latex-mathtools
+texlive-latex-diagbox
+texlive-latex-mdframed
+texlive-latex-adjustbox
+texlive-latex-varwidth
+texlive-latex-environ
+texlive-latex-standalone
+
+# Directory Structure
+## LaTeX Templates (elastin/latex_templates/)
+- latex_config.tex      # Common LaTeX configuration settings
+- dark_theme.tex        # Dark theme template
+- whitepaper_template.tex # Whitepaper template
+- content.tex          # Content template
+- elastin_findings_whitepaper.md # Whitepaper source
+
+## Output Files (elastin/)
+- whitepaper.pdf       # Generated whitepaper
+- elastin_findings.pdf # Generated findings document
+- elastin_findings.md  # Main findings document
+
+# System Requirements
+## macOS
+- Homebrew (Package Manager)
+- BasicTeX or MacTeX
+
+## Font Requirements
+- Roboto (Main font)
+- FiraCode (Monospace font)
+- Noto Sans (Fallback font)
+
+# Additional Dependencies for Interactive Deployment
+psutil>=5.9.0
+docker>=6.1.0
+docker-compose>=2.20.0
+requests>=2.31.0
+websockets>=11.0.0
+kafka-python>=2.0.0
+confluent-kafka>=2.2.0
+prometheus-api-client>=0.5.0
+elasticsearch-dsl>=8.9.0
+grpcio>=1.58.0
+protobuf>=4.24.0
+click>=8.1.0
+rich>=13.6.0
+tqdm>=4.66.0
+structlog>=23.1.0
+
+# Note: Some packages may require additional system-level installations
+# Use package manager (brew, apt, yum) as appropriate for your system 

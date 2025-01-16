@@ -1,0 +1,93 @@
+% Common LaTeX Configuration Settings
+
+% Essential packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{minted}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{framed}
+\usepackage{parskip}
+\usepackage{setspace}
+\usepackage{subfig}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{lastpage}
+\usepackage{abstract}
+\usepackage{appendix}
+
+% Page geometry
+\geometry{margin=2.5cm}
+
+% Colors
+\definecolor{primary}{RGB}{0, 82, 155}
+\definecolor{secondary}{RGB}{100, 100, 100}
+\definecolor{codebackground}{RGB}{245, 245, 245}
+
+% Title formatting
+\titleformat{\section}
+    {\Large\bfseries\color{primary}}
+    {\thesection}{1em}{}
+\titleformat{\subsection}
+    {\large\bfseries\color{secondary}}
+    {\thesubsection}{1em}{}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{secondary}{Project Sandstrom}}
+\fancyhead[R]{\textcolor{secondary}{\thepage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Code block styling
+\setminted{
+    bgcolor=codebackground,
+    fontsize=\small,
+    frame=single,
+    framesep=2mm,
+    baselinestretch=1.2,
+    linenos=true,
+    breaklines=true,
+    fontfamily=ttfamily
+}
+
+% Custom environments
+\newenvironment{note}[1][]
+    {\begin{tcolorbox}[
+        colframe=primary,
+        colback=white,
+        arc=0mm,
+        title=#1,
+        fonttitle=\bfseries
+    ]}
+    {\end{tcolorbox}}
+
+\newenvironment{warning}[1][]
+    {\begin{tcolorbox}[
+        colframe=red,
+        colback=white,
+        arc=0mm,
+        title=#1,
+        fonttitle=\bfseries
+    ]}
+    {\end{tcolorbox}}
+
+% For better handling of figures
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {
+    \origfigure[H]
+} {
+    \endorigfigure
+} 
