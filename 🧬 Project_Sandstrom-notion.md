@@ -4,11 +4,11 @@
 
   By [**Ben Ahmed**](https://www.linkedin.com/in/benahmed/)
 
-[https://img.shields.io/badge/status-active_research-blue](https://img.shields.io/badge/status-active_research-blue)
+![Status](https://img.shields.io/badge/status-active_research-blue)
 
-[https://img.shields.io/badge/phase-hypothesis_testing-yellow](https://img.shields.io/badge/phase-hypothesis_testing-yellow)
+![Phase](https://img.shields.io/badge/phase-hypothesis_testing-yellow)
 
-[https://img.shields.io/badge/last_update-January_2024-green](https://img.shields.io/badge/last_update-January_2024-green)
+![Update](https://img.shields.io/badge/last_update-January_2024-green)
 
 ## 🎯 Project Overview
 
@@ -294,7 +294,7 @@ These windows of opportunity can be precisely identified through AI analysis of 
     DOI: [10.1126/sciadv.1500131](https://doi.org/10.1126/sciadv.1500131)
     - 👩‍🔬 Sell, D. R. (2018). "Age-related modification of proteins." *Nature Reviews Chemistry*, 2, 332-341.
     DOI: [10.1038/s41570-018-0042-7](https://doi.org/10.1038/s41570-018-0042-7)
-    - 👨‍�� Cerami, A. (2019). "Protein cross-linking and aging." *Cell Metabolism*, 29(6), 1317-1328.
+    - 👨‍🔬 Cerami, A. (2019). "Protein cross-linking and aging." *Cell Metabolism*, 29(6), 1317-1328.
     DOI: [10.1016/j.cmet.2019.05.003](https://doi.org/10.1016/j.cmet.2019.05.003)
     
     ### Recent Developments
