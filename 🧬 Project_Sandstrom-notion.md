@@ -565,6 +565,6 @@ gantt
 
 *Last Updated: January 24, 2024*
 
-**Version: 2.0**
+**Version: 2.1**
 
 [View Research Dashboard](https://lab24.ai/dashboard) | [Access Data Portal](https://lab24.ai/data)
